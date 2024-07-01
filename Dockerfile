@@ -5,7 +5,7 @@ ENV USER=developer
 ENV GROUP=developers
 ENV UID=1001 
 
-ENV HOME /home/developer
+ENV HOME /home/{user}
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN groupadd -r ${GROUP} && \
