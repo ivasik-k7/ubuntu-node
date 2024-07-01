@@ -21,7 +21,7 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
 
-      - name: Build and push Docker image for Python
+      - name: Build and push Docker image for NodeJs
         id: docker_build
         uses: docker/build-push-action@v5
         with:
@@ -29,4 +29,4 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu-python-poetry:latest
+            ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu-node:latest
